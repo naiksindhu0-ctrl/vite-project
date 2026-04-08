@@ -227,7 +227,7 @@ function Home({ setActivePage }) {
       </em>
     </h1>
 
-    /* DARKER PARAGRAPH */
+    {/* DARKER PARAGRAPH */}
     <p className="font-light text-[#3B2A20] dark:text-[#D6BFA7] text-lg md:text-xl max-w-xl mx-auto mb-10 leading-relaxed"
       style={{ fontFamily: "'Cormorant Garamond', serif" }}>
       A culinary experience beyond expectations — three Michelin stars, one unforgettable evening.
@@ -267,7 +267,7 @@ function Home({ setActivePage }) {
   </div>
 
 </section>
-      /* ── FEATURED DISHES ── */
+      {/* ── FEATURED DISHES ── */}
       <section className="py-28 px-6 max-w-7xl mx-auto bg-[#F7E1D7]">
   <div className="text-center mb-16">
     <SectionLabel label="Our Creations" />
@@ -321,7 +321,7 @@ function Home({ setActivePage }) {
     ))}
   </div>
 </section>
-/* ── WHY CHOOSE US ── */
+{/* ── WHY CHOOSE US ── */}
 <section className="py-24 bg-[#F7E1D7] border-y border-[#E6B8A2]">
   <div className="max-w-7xl mx-auto px-6">
 
@@ -365,7 +365,7 @@ function Home({ setActivePage }) {
       <section className="py-28 max-w-7xl mx-auto px-6 bg-[#F7E1D7]">
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-    /* IMAGE */
+   { /* IMAGE */}
     <div className="relative">
       <img
         src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=85"
@@ -377,7 +377,7 @@ function Home({ setActivePage }) {
       <div className="absolute -top-6 -left-6 w-32 h-32 border border-[#E6B8A2]/30 rounded-lg" />
     </div>
 
-    /* CONTENT */
+    {/* CONTENT */}
     <div>
       <SectionLabel label="Meet the Maestro" />
 
@@ -473,7 +473,7 @@ function Home({ setActivePage }) {
 
   </div>
 </section>
-      /* ── GALLERY PREVIEW ---─ */
+     { /* ── GALLERY PREVIEW ---─ */}
       <section className="py-28 max-w-7xl mx-auto px-6 bg-[#F7E1D7]">
   <div className="text-center mb-16">
     <SectionLabel label="The crunch cafe World" />
@@ -523,7 +523,7 @@ function Home({ setActivePage }) {
   );
 }
 
-/* ─── ABOUT PAGE ─────────────────────────────────────── */
+{/* ─── ABOUT PAGE ─────────────────────────────────────── */}
 function About() {
   return (
     <div className="bg-gradient-to-b from-[#FDE2E4] via-[#FFD7D9] to-[#FADBD8] pt-28">
@@ -598,7 +598,7 @@ function About() {
           </div>
         </div>
       </section>
-/* ───────── AWARDS ───────── */
+{/* ───────── AWARDS ───────── */}
 <section className="py-24 max-w-7xl mx-auto px-6 bg-[#F7E1D7]">
 
   <div className="text-center mb-16">
@@ -639,7 +639,7 @@ function About() {
 </section>
 
 
-/* ───────── AMBIENCE ───────── */
+{/* ───────── AMBIENCE ───────── */}
 <section className="pb-28 max-w-7xl mx-auto px-6 bg-[#F7E1D7]">
 
   <div className="grid grid-cols-3 gap-3 h-[400px] md:h-[500px] rounded-lg overflow-hidden">
@@ -673,7 +673,7 @@ function About() {
   );
 }
 
-/* ─── SERVICES PAGE ──────────────────────────────────── */
+{/* ─── SERVICES PAGE ──────────────────────────────────── */}
 function Services({ setActivePage }) {
   return (
     <div className="bg-[#0D0B08] pt-28">
@@ -698,7 +698,7 @@ function Services({ setActivePage }) {
 </section>
 
 
-/* ───────── SERVICES CARDS ───────── */
+{/* ───────── SERVICES CARDS ───────── */}
 <section className="max-w-7xl mx-auto px-6 pb-28 grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#F7E1D7]">
 
   {SERVICES.map((s, i) => (
@@ -744,7 +744,7 @@ function Services({ setActivePage }) {
 </section>
 
 
-/* ───────── PRIVATE DINING PROMO ───────── */
+{/* ───────── PRIVATE DINING PROMO ───────── */}
 <section className="relative h-80 flex items-center justify-center overflow-hidden">
 
   <img
@@ -781,7 +781,7 @@ function Services({ setActivePage }) {
   );
 }
 
-/* ─── PORTFOLIO PAGE ─────────────────────────────────── */
+{/* ─── PORTFOLIO PAGE ─────────────────────────────────── */}
 function Portfolio() {
   const [filter, setFilter] = useState("All");
   const [lightbox, setLightbox] = useState(null);
@@ -811,7 +811,7 @@ function Portfolio() {
 </section>
 
 
-/* ───────── SERVICES CARDS ───────── */
+{/* ───────── SERVICES CARDS ───────── */}
 <section className="max-w-7xl mx-auto px-6 pb-28 grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#F7E1D7]">
 
   {SERVICES.map((s, i) => (
@@ -857,7 +857,7 @@ function Portfolio() {
 </section>
 
 
-/* ───────── PRIVATE DINING PROMO ───────── */
+{/* ───────── PRIVATE DINING PROMO ───────── */}
 <section className="relative h-80 flex items-center justify-center overflow-hidden">
 
   <img
@@ -937,7 +937,7 @@ function Portfolio() {
   );
 }
 
-/* ─── CONTACT PAGE ───────────────────────────────────── */
+{/* ─── CONTACT PAGE ───────────────────────────────────── */}
 function Contact() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", date: "", message: "" });
   const [sent, setSent] = useState(false);
@@ -1098,7 +1098,7 @@ function Contact() {
 
     {/* CONTACT */}
     <div className="space-y-5">
-      {[["📞", "Reservations", "+91 22 4001 9999"], ["✉️", "Email", "reserve@crunch cafe.in"], ["📸", "Instagram", "@aurum.mumbai"]].map(([icon, label, val]) => (
+      {[["📞", "Reservations", "+91 22 4001 9999"], ["✉️", "Email", "reserve@crunch cafe.in"], ["📸", "Instagram", "@crunch cafe.mumbai"]].map(([icon, label, val]) => (
         <div key={label} className="flex items-center gap-4">
           <div className="w-10 h-10 border border-[#E6B8A2] flex items-center justify-center text-sm flex-shrink-0 rounded">
             {icon}
@@ -1122,7 +1122,7 @@ function Contact() {
   );
 }
 
-/* ─── FOOTER ─────────────────────────────────────────── */
+{/* ─── FOOTER ─────────────────────────────────────────── */}
 function Footer({ setActivePage }) {
   return (
     <footer className="bg-[#D6A79B] border-t border-[#C48F84] py-16 px-6">
@@ -1196,7 +1196,7 @@ function Footer({ setActivePage }) {
   );
 }
 
-/* ─── APP ROOT ───────────────────────────────────────── */
+{/* ─── APP ROOT ───────────────────────────────────────── */}
 export default function App() {
   const [activePage, setActivePage] = useState("Home");
 
