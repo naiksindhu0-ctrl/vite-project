@@ -1195,17 +1195,17 @@ function Help() {
           >
             {/* QUESTION */}
             <button
-              onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              className="w-full text-left px-6 py-4 flex justify-between items-center"
-            >
-              <span className="text-[#4A2C2A] font-medium">
-                {faq.q}
-              </span>
-              <span className="text-[#C0846A] text-xl">
-                {openIndex === i ? "−" : "+"}
-              </span>
-            </button>
-
+  onMouseEnter={() => setOpenIndex(i)}
+  onMouseLeave={() => setOpenIndex(null)}
+  className="w-full text-left px-6 py-4 flex justify-between items-center"
+>
+  <span className="text-[#4A2C2A] font-medium">
+    {faq.q}
+  </span>
+  <span className="text-[#C0846A] text-xl">
+    {openIndex === i ? "−" : "+"}
+  </span>
+</button>
             {/* ANSWER */}
             {openIndex === i && (
               <div className="px-6 pb-4 text-[#6E4A3A] text-sm">
@@ -1302,7 +1302,7 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const PAGE = { Home, About, Services, Portfolio, Contact };
+  const PAGE = { Home, About, Services, Portfolio, Contact,Help };
   const PageComponent = PAGE[activePage];
 
   return (
