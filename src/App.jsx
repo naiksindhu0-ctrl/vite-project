@@ -1121,6 +1121,103 @@ function Contact() {
     </div>
   );
 }
+// ─── HELP PAGE ───────────────────────────────────────
+function Help() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const FAQS = [
+    {
+      q: "How can I book a table?",
+      a: "You can book a table through our Contact page by filling out the reservation form."
+    },
+    {
+      q: "Do you offer vegetarian options?",
+      a: "Yes, we offer a wide range of vegetarian dishes crafted by our chefs."
+    },
+    {
+      q: "What are your opening hours?",
+      a: "We are open Monday to Sunday, from 12 PM to 11 PM."
+    },
+    {
+      q: "Do you provide home delivery?",
+      a: "Currently, we offer luxury catering but not regular home delivery."
+    },
+    {
+      q: "Can I host private events?",
+      a: "Yes, we provide private dining and event hosting services."
+    },
+    {
+      q: "Is parking available?",
+      a: "Yes, we offer valet parking for all our guests."
+    },
+    {
+      q: "Do I need a reservation?",
+      a: "Reservations are recommended, especially during weekends."
+    },
+    {
+      q: "Do you serve alcohol?",
+      a: "Yes, we have a curated wine and beverage collection."
+    },
+    {
+      q: "Can I customize my menu?",
+      a: "Yes, for private events we offer fully customizable menus."
+    },
+    {
+      q: "Where are you located?",
+      a: "We are located in Mumbai, Maharashtra."
+    }
+  ];
+
+  return (
+    <div className="bg-[#F7E1D7] pt-28 min-h-screen">
+      
+      {/* HEADER */}
+      <section className="text-center px-6 mb-16">
+        <SectionLabel label="Support" />
+
+        <h2 className="font-serif text-5xl text-[#4A2C2A] mb-4">
+          Help & FAQs
+        </h2>
+
+        <GoldDivider />
+
+        <p className="text-[#6E4A3A] max-w-xl mx-auto mt-4">
+          Find answers to common questions about our services, bookings, and experience.
+        </p>
+      </section>
+
+      {/* FAQ LIST */}
+      <div className="max-w-3xl mx-auto px-6 space-y-4 pb-20">
+        {FAQS.map((faq, i) => (
+          <div
+            key={i}
+            className="border border-[#E6B8A2] bg-[#FFF5F0] rounded-lg overflow-hidden"
+          >
+            {/* QUESTION */}
+            <button
+              onClick={() => setOpenIndex(openIndex === i ? null : i)}
+              className="w-full text-left px-6 py-4 flex justify-between items-center"
+            >
+              <span className="text-[#4A2C2A] font-medium">
+                {faq.q}
+              </span>
+              <span className="text-[#C0846A] text-xl">
+                {openIndex === i ? "−" : "+"}
+              </span>
+            </button>
+
+            {/* ANSWER */}
+            {openIndex === i && (
+              <div className="px-6 pb-4 text-[#6E4A3A] text-sm">
+                {faq.a}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 {/* ─── FOOTER ─────────────────────────────────────────── */}
 function Footer({ setActivePage }) {
