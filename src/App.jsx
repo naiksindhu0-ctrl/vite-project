@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 /* ─── DATA ─────────────────────────────────────────── */
-const NAV_LINKS = ["Home", "About", "Services", "Portfolio", "Contact"];
+const NAV_LINKS = ["Home", "About", "Services", "Portfolio", "Contact","Help"];
 
 const DISHES = [
   { name: "Saffron Lobster Bisque", desc: "House-smoked cream, micro herbs, caviar pearls", tag: "Chef's Signature", img: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" },
